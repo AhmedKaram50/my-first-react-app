@@ -10,19 +10,16 @@ import Title from "./Title"
 //     )
 // }
 
-function Greeting() {
-
+function Greeting({ title, pText, children }) {
     const pStyle = {fontSize: '40px', color: '#ddd'}
-    const pText = "This is Paragraph 33"
-    const title = "Ahmed Is Here Learning React"
-
     return (
-        <>
+        <div className="greeting-wrapper">
             <h2 className="title">{ title }</h2>
             <p style={{fontSize: '40px', color: '#ddd'}}> {pText} </p>
+            ----{children}----
             <p style={pStyle}> {pText} </p>
             <Title />
-        </>
+        </div>
     )
 }
 
